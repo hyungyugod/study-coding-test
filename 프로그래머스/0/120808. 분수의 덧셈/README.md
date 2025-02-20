@@ -1,10 +1,10 @@
 # [level 0] 분수의 덧셈 - 120808 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120808?language=python3) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120808) 
 
 ### 성능 요약
 
-메모리: 10.3 MB, 시간: 117.33 ms
+메모리: 10.4 MB, 시간: 158.54 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 02월 20일 16:41:20
+2025년 02월 20일 23:24:44
 
 ### 문제 설명
 
