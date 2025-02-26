@@ -7,11 +7,7 @@ def solution(letter):
     '-.--':'y','--..':'z'
 }
     answer = []
-    box = ""
-    for i in (letter + " "):
-        if i == " ":
-            answer.append(morse[box])
-            box = ""
-        else:
-            box += i    
+    sp_letter = letter.split(" ")
+    for i in sp_letter:
+        answer += morse[i]
     return "".join(answer)
