@@ -2,22 +2,18 @@ class Solution {
     public int solution(int n, String control) {
     int answer = n;
     for (char i : control.toCharArray()){
-        if (String.valueOf(i).equals("w")){
-            answer += 1;
-        }
+        switch (i) {
+            case 'w': answer += 1; break;
+            
+            case 's': answer -= 1; break;
 
-        else if (String.valueOf(i).equals("s")){
-            answer -= 1;
-        }
+            case 'd': answer += 10; break;
 
-        else if (String.valueOf(i).equals("d")){
-            answer += 10;
+            case 'a': answer -= 10; break;
+        
         }
-
-        else if (String.valueOf(i).equals("a")){
-            answer -= 10;
-        }
+    
 }
-    return answer;
+        return answer;
 }
 }
