@@ -1,10 +1,10 @@
 # [level 0] 문자열 묶기 - 181855 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181855?language=python3) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181855?language=java) 
 
 ### 성능 요약
 
-메모리: 16.3 MB, 시간: 11.05 ms
+메모리: 126 MB, 시간: 10.40 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 03월 23일 22:30:44
+2025년 03월 23일 22:44:31
 
 ### 문제 설명
 
