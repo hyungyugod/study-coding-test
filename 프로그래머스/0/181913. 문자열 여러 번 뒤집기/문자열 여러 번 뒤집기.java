@@ -1,14 +1,23 @@
 class Solution {
     public String solution(String my_string, int[][] queries) {
-    StringBuilder answer = new StringBuilder(my_string);
-    StringBuilder box = new StringBuilder();
+    char[] char_string = my_string.toCharArray();
 
-    for (int[]i : queries){
-        box.append(answer.substring(i[0],i[1]+1));
-        answer.replace(i[0], i[1]+1, box.reverse().toString());
-        box.setLength(0);
+    int start;
+    int end;
+
+    for (int[] i : queries){
+            start = i[0];
+            end = i[1];
+        while (start < end){
+            char tmp;
+            tmp = char_string[start];
+            char_string[start] = char_string[end];
+            char_string[end] = tmp;
+            start++;
+            end--;
+        }
     }
-
-    return answer.toString();
+    
+    return new String(char_string);
 }
 }
