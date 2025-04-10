@@ -1,0 +1,11 @@
+SELECT I.ITEM_ID, I.ITEM_NAME, I.RARITY
+    FROM ITEM_INFO I
+    JOIN ITEM_TREE T ON I.ITEM_ID = T.ITEM_ID
+    WHERE I.ITEM_ID NOT IN ( -- 부모로 존재하는 아이디들
+        
+    SELECT PARENT_ITEM_ID
+        FROM ITEM_TREE 
+        GROUP BY PARENT_ITEM_ID
+        HAVING PARENT_ITEM_ID IS NOT NULL) -- 현재 아이디가 부모가 될 수 있는가
+        
+    ORDER BY I.ITEM_ID DESC;
