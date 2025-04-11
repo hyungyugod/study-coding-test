@@ -1,0 +1,18 @@
+WITH RECURSIVE TIME AS (
+    SELECT 0 AS HOUR -- ANCHOR 초기값 생성
+    UNION 
+    SELECT HOUR + 1 -- RECURSIVE 이 값이 반복호출되면서 테이블을 구성, 앞선 테이블의 모든 값에 적용한 걸 만듦 UNION으로 하면 UNION ALL과 달리 중복을 제거해준다.
+        FROM TIME
+        WHERE HOUR < 23),
+
+OUTS AS (SELECT HOUR(DATETIME) AS HOUR, COUNT(*) AS COUNT
+    FROM ANIMAL_OUTS 
+    GROUP BY HOUR(DATETIME))
+    
+SELECT T.HOUR, IFNULL(O.COUNT, 0) AS COUNT
+    FROM TIME T
+    LEFT JOIN OUTS O ON T.HOUR = O.HOUR
+    ORDER BY T.HOUR;
+    
+    
+        
