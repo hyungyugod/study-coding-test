@@ -1,0 +1,82 @@
+-- PYTHON CODE
+WITH PY AS(
+SELECT CODE 
+    FROM SKILLCODES 
+    WHERE NAME = 'Python'),
+    
+-- C# CODE
+C AS(
+SELECT CODE 
+    FROM SKILLCODES 
+    WHERE NAME = 'C#'),
+    
+-- FRONTEND SKILLS
+FRONT AS (
+SELECT CODE
+    FROM SKILLCODES
+    WHERE CATEGORY = 'Front End'
+),
+    
+-- GRADE A 개발자 명단
+AD AS(
+SELECT 'A' AS GRADE, D.ID, D.EMAIL
+    FROM DEVELOPERS D
+    CROSS JOIN PY 
+    WHERE D.SKILL_CODE & PY.CODE = PY.CODE
+        AND EXISTS (
+            SELECT 1
+            FROM FRONT F
+            WHERE D.SKILL_CODE & F.CODE = F.CODE
+            )),
+            
+-- GRADE B 개발자 명단 (A가 아님)
+BD AS (
+SELECT 'B' AS GRADE, D.ID, D.EMAIL
+    FROM DEVELOPERS D
+    CROSS JOIN C 
+    WHERE D.SKILL_CODE & C.CODE = C.CODE
+        AND D.ID NOT IN (SELECT ID FROM AD)),
+
+-- GRADE C 개발자 명단
+CD AS (
+SELECT 'C' AS GRADE, D.ID, D.EMAIL
+    FROM DEVELOPERS D
+    WHERE EXISTS (
+            SELECT 1
+            FROM FRONT F
+            WHERE D.SKILL_CODE & F.CODE = F.CODE
+            )
+        AND D.ID NOT IN (SELECT ID FROM BD)
+        AND D.ID NOT IN (SELECT ID FROM AD)),
+
+-- GRADE가 있는 모든 개발자들
+UNITED_TABLE AS (
+SELECT GRADE, ID, EMAIL
+    FROM AD
+UNION
+SELECT GRADE, ID, EMAIL
+    FROM BD
+UNION
+SELECT GRADE, ID, EMAIL
+    FROM CD)
+
+SELECT GRADE, ID, EMAIL
+    FROM UNITED_TABLE
+    ORDER BY GRADE ASC, ID ASC;
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
