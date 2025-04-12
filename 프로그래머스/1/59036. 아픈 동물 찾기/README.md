@@ -1,6 +1,6 @@
 # [level 1] 아픈 동물 찾기 - 59036 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/59036?language=oracle) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/59036) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@ Empty
 
 ### 제출 일자
 
-2025년 04월 13일 00:08:02
+2025년 04월 13일 00:08:07
 
 ### 문제 설명
 
