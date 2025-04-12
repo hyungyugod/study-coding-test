@@ -1,2 +1,4 @@
--- 코드를 입력하세요
-SELECT animal_id from ANIMAL_INS where name is null;
+SELECT ANIMAL_ID
+    FROM ANIMAL_INS 
+    WHERE NAME IS NULL
+    ORDER BY ANIMAL_ID ASC;
