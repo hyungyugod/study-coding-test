@@ -1,10 +1,10 @@
 # [level 0] 잘라서 배열로 저장하기 - 120913 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120913) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120913?language=java) 
 
 ### 성능 요약
 
-메모리: 10.3 MB, 시간: 0.02 ms
+메모리: 87.8 MB, 시간: 0.03 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 02월 27일 10:24:33
+2025년 04월 13일 21:58:45
 
 ### 문제 설명
 
