@@ -30,7 +30,7 @@ class Solution {
             }
 
             else if (i == ')'){
-                left.pop();
+                left.poll();
             }
         }
 
