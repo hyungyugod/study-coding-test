@@ -1,10 +1,10 @@
 # [level 0] 세균 증식 - 120910 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120910?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120910?language=c) 
 
 ### 성능 요약
 
-메모리: 70 MB, 시간: 0.06 ms
+메모리: 4.18 MB, 시간: 0.02 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 04월 11일 21:11:51
+2025년 07월 27일 15:33:12
 
 ### 문제 설명
 
